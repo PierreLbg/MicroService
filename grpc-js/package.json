@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:client": "nodemon client.js",
+    "start:server": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@grpc/grpc-js": "^1.8.4",
-    "@grpc/proto-loader": "^0.7.4"
+    "@grpc/proto-loader": "^0.7.4",
+    "mqtt": "^4.3.7",
+    "nodemon": "^2.0.20"
   }
 }
