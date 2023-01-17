@@ -4,11 +4,11 @@ Ce dépôt contient les projets du cours de microservices :
 
 ## Projet d'API REST
 
-Ce projet est une API REST simple pour effectuer des opérations mathématiques telles que l'addition. Il est construit en utilisant un framework tel qu'Express.js et utilise un point de terminaison pour accepter et renvoyer un payload JSON. La route `/somme` permet d'additionner deux nombres en utilisant les paramètres `nombre1` et `nombre2` et renvoie le résultat sous la forme d'un nombre. Ce projet se trouve dans le répertoire `Rest-Somme`.
+Ce projet est une API REST simple pour effectuer des opérations mathématiques telles que l'addition. Il est construit en utilisant un framework tel qu'Express.js. La route `/somme` permet d'additionner deux nombres en utilisant les paramètres `nombre1` et `nombre2` et renvoie le résultat sous la forme d'un nombre. Ce projet se trouve dans le répertoire `Rest-Somme`.
 
 ### Mise en route
 
-Pour exécuter les projets, vous aurez besoin d'avoir Node.js et pnpm installés sur votre machine.
+Pour exécuter les projets, vous aurez besoin d'avoir Node.js, Express.js et pnpm installés sur votre machine.
 
 1. Clonez le dépôt
 2. Accédez au répertoire de projet `Rest-Somme`
