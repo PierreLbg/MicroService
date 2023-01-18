@@ -1,0 +1,21 @@
+[
+    {
+        "id": "7427944ee399c07b",
+        "type": "function",
+        "z": "7f9f2392896f03cd",
+        "name": "function to date string",
+        "func": "const date = new Date (msg.payload);\nmsg.payload = date.toISOString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "3f2b347a1ba7847b"
+            ]
+        ]
+    }
+]

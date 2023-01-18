@@ -25,7 +25,22 @@ Ce projet est un serveur gRPC construit en utilisant Node.js, express.js, la lib
 Pour exécuter les projets, vous aurez besoin d'avoir Node.js, pnpm et mosquitto installés sur votre machine. Il faut également installer les paquets @grpc/grpc-js et @grpc/proto-loader.
 
 1. Clonez le dépôt
-2. Accédez au répertoire de projet approprié (par exemple `Rest-Somme` ou `grpc-js`)
+2. Accédez au répertoire de projet `grpc-js`
 3. Exécutez `pnpm install` pour installer les dépendances nécessaires
 4. Pour lancer le serveur gRPC, utilisez `pnpm start:server` dans un terminal, puis `pnpm start:client` dans un autre terminal.
 5. Pour envoyer un message au serveur gRPC, utilisez la commande `mosquitto_pub -h 127.0.0.1  -t grpc_message -m "Ceci est un message"`,
+
+## Projet Node-RED
+
+Ce projet utilise Node-RED pour envoyer des messages au serveur gRPC en utilisant un subscriber MQTT pour récupérer les messages. Il est dépendant du projet gRPC et ne peut pas être exécuté sans celui-ci. Il se trouve dans le répertoire `node-red`.
+
+### Mise en route
+
+Pour exécuter les projets, vous aurez besoin d'avoir Node-RED, Node.js, pnpm et mosquitto installés sur votre machine. 
+
+1. Clonez le dépôt
+2. Accédez au répertoire de projet `node-red`
+3. Exécutez `pnpm install` pour installer les dépendances nécessaires
+4. Ouvrez Node-RED et importez le fichier Tntégration.json situé dans le répertoire `node-red`
+5. Éffectuer la mise en route du Projet gRPC en allant jusqu'à la requête `pnpm start:server`
+6. Vous pouvez maintenant utilisez la commande `mosquitto_pub -h 127.0.0.1  -t node_red -m "Ceci est un message"`,

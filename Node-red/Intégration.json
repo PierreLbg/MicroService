@@ -1,0 +1,141 @@
+[
+    {
+        "id": "041a8c2ce281180a",
+        "type": "tab",
+        "label": "Intégration",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fcf23b2b5e374cb2",
+        "type": "mqtt in",
+        "z": "041a8c2ce281180a",
+        "name": "Mqtt receiver",
+        "topic": "node_red",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "1c8438a9d084b22e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "78f2f20c3c2d5c43",
+                "19c28807b9f68cbe"
+            ]
+        ]
+    },
+    {
+        "id": "4e4a98b7b623f08e",
+        "type": "catch",
+        "z": "041a8c2ce281180a",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 580,
+        "y": 420,
+        "wires": [
+            [
+                "78f2f20c3c2d5c43"
+            ]
+        ]
+    },
+    {
+        "id": "78f2f20c3c2d5c43",
+        "type": "debug",
+        "z": "041a8c2ce281180a",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0e7ec2657066c602",
+        "type": "grpc-call",
+        "z": "041a8c2ce281180a",
+        "name": "",
+        "server": "cb0a90c7db96e40e",
+        "service": "Traitement",
+        "method": "Action",
+        "chain": "",
+        "key": "",
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "78f2f20c3c2d5c43"
+            ]
+        ]
+    },
+    {
+        "id": "19c28807b9f68cbe",
+        "type": "function",
+        "z": "041a8c2ce281180a",
+        "name": "message loader",
+        "func": "msg.payload = {\n    message: msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
+                "0e7ec2657066c602"
+            ]
+        ]
+    },
+    {
+        "id": "1c8438a9d084b22e",
+        "type": "mqtt-broker",
+        "name": "Localhost",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cb0a90c7db96e40e",
+        "type": "grpc-server",
+        "port": "50051",
+        "name": "localhost",
+        "server": "127.0.0.1",
+        "protoFile": "syntax = \"proto3\";\n\nservice Traitement {\n    rpc Action (InputMessage) returns (OutputMessage) {}\n}\n\nmessage InputMessage {\n    string message = 1;\n}\n\nmessage OutputMessage {\n   string message = 1;\n   string AR = 2;\n}",
+        "ca": "",
+        "chain": "",
+        "key": "",
+        "mutualTls": false,
+        "localServer": true
+    }
+]
