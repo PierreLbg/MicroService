@@ -1,0 +1,155 @@
+[
+    {
+        "id": "6c0a524df5b8a2bd",
+        "type": "tab",
+        "label": "Sevice 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e217a6307a0c95fa",
+        "type": "http in",
+        "z": "6c0a524df5b8a2bd",
+        "name": "",
+        "url": "/s1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 320,
+        "wires": [
+            [
+                "fe20239f8df3dcb6"
+            ]
+        ]
+    },
+    {
+        "id": "fe20239f8df3dcb6",
+        "type": "http request",
+        "z": "6c0a524df5b8a2bd",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "127.0.0.1:1881/s2",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 320,
+        "wires": [
+            [
+                "7635a4f7ded31c4a",
+                "bce683bcba08eed6"
+            ]
+        ]
+    },
+    {
+        "id": "3eea076819fc5135",
+        "type": "inject",
+        "z": "6c0a524df5b8a2bd",
+        "name": "Déclencheur: OK",
+        "props": [
+            {
+                "p": "payload.type",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 340,
+        "y": 380,
+        "wires": [
+            [
+                "fe20239f8df3dcb6"
+            ]
+        ]
+    },
+    {
+        "id": "7635a4f7ded31c4a",
+        "type": "debug",
+        "z": "6c0a524df5b8a2bd",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "bce683bcba08eed6",
+        "type": "http response",
+        "z": "6c0a524df5b8a2bd",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d31fea95df5caa2c",
+        "type": "inject",
+        "z": "6c0a524df5b8a2bd",
+        "name": "Déclencheur: KO",
+        "props": [
+            {
+                "p": "payload.type",
+                "v": "KO",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 340,
+        "y": 440,
+        "wires": [
+            [
+                "fe20239f8df3dcb6"
+            ]
+        ]
+    },
+    {
+        "id": "75cfdc73053c5490",
+        "type": "inject",
+        "z": "6c0a524df5b8a2bd",
+        "name": "Déclencheur: Error",
+        "props": [
+            {
+                "p": "payload.other",
+                "v": "test",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 330,
+        "y": 500,
+        "wires": [
+            [
+                "fe20239f8df3dcb6"
+            ]
+        ]
+    }
+]

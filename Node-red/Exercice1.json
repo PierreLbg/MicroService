@@ -1,5 +1,38 @@
 [
     {
+        "id": "7f9f2392896f03cd",
+        "type": "tab",
+        "label": "Exercice 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "295c708cba6a3215",
+        "type": "inject",
+        "z": "7f9f2392896f03cd",
+        "name": "timestamp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "7427944ee399c07b"
+            ]
+        ]
+    },
+    {
         "id": "7427944ee399c07b",
         "type": "function",
         "z": "7f9f2392896f03cd",
@@ -17,5 +50,54 @@
                 "3f2b347a1ba7847b"
             ]
         ]
+    },
+    {
+        "id": "3f2b347a1ba7847b",
+        "type": "debug",
+        "z": "7f9f2392896f03cd",
+        "name": "debug date",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "295e2b485f4381a0",
+        "type": "catch",
+        "z": "7f9f2392896f03cd",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "daf57faa2773065a"
+            ]
+        ]
+    },
+    {
+        "id": "daf57faa2773065a",
+        "type": "debug",
+        "z": "7f9f2392896f03cd",
+        "name": "Debug error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 300,
+        "wires": []
     }
 ]
