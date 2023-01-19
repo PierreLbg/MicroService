@@ -8,13 +8,12 @@ Ce projet est une API REST simple pour effectuer des opérations mathématiques 
 
 ### Mise en route
 
-Pour exécuter les projets, vous aurez besoin d'avoir Node.js, Express.js et pnpm installés sur votre machine.
+Pour exécuter les projets, vous aurez besoin d'installer Node.js, Express.js et pnpm installés sur votre machine.
 
 1. Clonez le dépôt
 2. Accédez au répertoire de projet `Rest-Somme`
-3. Exécutez `pnpm install` pour installer les dépendances nécessaires
-4. Pour lancer le serveur, utilisez `pnpm dev` dans un terminal.
-5. Pour accéder au client, il suffit de se rendre à l'adresse http://localhost:9000/somme?nombre1=2&nombre2=4.
+3. Pour lancer le serveur, utilisez `pnpm dev` dans un terminal.
+4. Pour accéder au client, il suffit de se rendre à l'adresse http://localhost:9000/somme?nombre1=2&nombre2=4.
 
 ## Projet gRPC
 
@@ -26,9 +25,8 @@ Pour exécuter les projets, vous aurez besoin d'avoir Node.js, pnpm et mosquitto
 
 1. Clonez le dépôt
 2. Accédez au répertoire de projet `grpc-js`
-3. Exécutez `pnpm install` pour installer les dépendances nécessaires
-4. Pour lancer le serveur gRPC, utilisez `pnpm start:server` dans un terminal, puis `pnpm start:client` dans un autre terminal.
-5. Pour envoyer un message au serveur gRPC, utilisez la commande `mosquitto_pub -h 127.0.0.1  -t grpc_message -m "Ceci est un message"`,
+3. Pour lancer le serveur gRPC, utilisez `pnpm start:server` dans un terminal, puis `pnpm start:client` dans un autre terminal.
+4. Pour envoyer un message au serveur gRPC, utilisez la commande `mosquitto_pub -h 127.0.0.1  -t grpc_message -m "Ceci est un message"`,
 
 ## Projet Node-RED
 
