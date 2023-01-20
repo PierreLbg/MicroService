@@ -66,7 +66,8 @@ Ce projet utilise Node-RED pour envoyer des messages au serveur gRPC en utilisan
 
 ## Projet Node-red_Multiservice
 
-Ce projet utilise Node-RED pour envoyer des requêtes REST à un service, qui va ensuite requêter un autre service, cachant ainsi l'existence de ce dernier à l'utilisateur final. Il se trouve dans le répertoire `node-red_multiservice`.
+Ce projet utilise Node-RED pour envoyer des requêtes REST à un service, qui va ensuite requêter un autre service, cachant ainsi l'existence de ce dernier à l'utilisateur final. 
+> Ce projet se trouve dans le répertoire `node-red_multiservice`.
 
 ### Mise en route
 
@@ -81,10 +82,11 @@ Ce projet utilise Node-RED pour envoyer des requêtes REST à un service, qui va
 ## Projet Go-kit
 
 Ce projet utilise Go-kit pour créer des microservices en utilisant le pattern "Kit". Il comprend deux parties : "example" et "exercice".
+> Ce projet se trouve dans le répertoire `go`
 
 ### Partie example
 
-La partie example contient des exemples tirés directement de la documentation de Go-kit. Ces exemples permettent de comprendre les différentes fonctionnalités de Go-kit.
+La partie example contient des exemples tirés directement de la documentation de Go-kit. Ces exemples permettent de comprendre les différentes fonctionnalités de Go-kit. Pour lancer un exemple, placez-vous dans le dossier correspondant (situé dans le répertoire "example") et exécutez la commande "go run *.go".
 
 ### Partie exercice
 
@@ -96,6 +98,6 @@ Le deuxième exercice, dans le dossier "exercice2", reprend le même exercice qu
 
 Pour exécuter les projets, vous aurez besoin d'avoir Go installé sur votre machine.
 
-1. Accédez au répertoire de projet "go-kit/exercice/"
-2. Pour lancer l'exercice 1 utilisez la commande "go run exercice1/main.go"
-3. Pour lancer l'exercice 2 utilisez la commande "go run exercice2/*.go"
+1. Accédez au répertoire de projet "go/exercice/"
+2. Pour lancer l'exercice 1, utilisez la commande "go run exercice1/main.go" depuis le répertoire "go-kit".
+3. Pour lancer l'exercice 2, utilisez la commande "go run exercice2/*.go" depuis le répertoire "go-kit".
