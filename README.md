@@ -7,8 +7,8 @@ Ce dépôt contient les projets du cours de microservices :
 Avant de lancer les projets, vous aurez besoin d'installer les logiciels et librairies suivants sur votre machine :
 - Node.js
 - pnpm
-- mosquitto (pour le projet gRPC et Node-RED)
-- Node-RED (pour le projet Node-RED)
+- mosquitto
+- Node-RED
 
 ## Mise en route générale
 1. Clonez le dépôt
@@ -27,7 +27,6 @@ Ce projet est une API REST simple pour effectuer des opérations mathématiques 
     curl --request GET \
     --url 'http://localhost:9000/somme?nombre1=1&nombre2=3'
 
-
 ## Projet gRPC
 
 Ce projet est un serveur gRPC construit en utilisant la librairie grpc de Node.js. Il permet de traiter les messages en utilisant la route `Traitement/Action` et de renvoyer une réponse. Le payload de la requête doit contenir un attribut "message". Les messages sont récupérés à partir d'un subscriber MQTT. La réponse comprendra un nouvel attribut "AR" avec la valeur "OK". 
@@ -37,8 +36,6 @@ Ce projet est un serveur gRPC construit en utilisant la librairie grpc de Node.j
 
 1. Pour lancer le serveur gRPC, utilisez `pnpm start:server` dans un terminal, puis `pnpm start:client` dans un autre terminal.
 2. Pour envoyer un message au serveur gRPC, utilisez la commande `pnpm start:message`
-
-## Projet Node-RED
 
 Ce projet utilise Node-RED pour envoyer des messages au serveur gRPC en utilisant un subscriber MQTT pour récupérer les messages. Il est dépendant du projet gRPC et ne peut pas être exécuté sans celui-ci. C'est le serveur du projet gRPC qui doit tourné (`grpc-js $pnpm start:server`)
 > Ce projet se trouve dans le répertoire `node-red`.
