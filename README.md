@@ -2,7 +2,7 @@
 
 Ce dépôt contient les projets du cours de microservices :
 
-## Sommaire
+### Sommaire
 - [Prérequis](#prérequis)
 - [Mise en route générale](#mise-en-route-générale)
 - [Projet d'API REST](#projet-dapi-rest)
@@ -11,7 +11,7 @@ Ce dépôt contient les projets du cours de microservices :
 - [Projet Node-red_Multiservice](#projet-node-red_multiservice)
 - [Projet Go-kit](#projet-go-kit)
 
-## Prérequis
+### Prérequis
 
 Avant de lancer les projets, vous aurez besoin d'installer les logiciels et librairies suivants sur votre machine :
 - Node.js
@@ -22,7 +22,7 @@ Avant de lancer les projets, vous aurez besoin d'installer les logiciels et libr
 - Go-kit
 
 
-## Mise en route générale
+### Mise en route générale
 
 1. Clonez le dépôt
 2. Accédez au répertoire de projet correspondant (`Rest-Somme`, `grpc-js`, `node-red`, `node-red_multiservice`, `go-kit`)
