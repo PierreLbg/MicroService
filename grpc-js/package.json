@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "nodemon client.js",
-    "start:server": "nodemon server.js"
+    "start:server": "nodemon server.js",
+    "start:message": "mosquitto_pub -h 127.0.0.1 -t grpc_message -m \"Ceci est un message\""
   },
   "keywords": [],
   "author": "",

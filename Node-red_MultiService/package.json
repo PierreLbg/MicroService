@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node-red"
+    "start:service1": "node-red -p 1882 -u ./service1 -s ./service1/settings.js",
+    "start:service2": "node-red -p 1881 -u ./service2 -s ./service2/settings.js"
   },
   "keywords": [],
   "author": "",

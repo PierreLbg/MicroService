@@ -41,10 +41,10 @@
         "type": "http response",
         "z": "bafa15919ae21bbb",
         "name": "KO",
-        "statusCode": "201",
+        "statusCode": "400",
         "headers": {},
         "x": 770,
-        "y": 320,
+        "y": 300,
         "wires": []
     },
     {
@@ -75,18 +75,42 @@
                 "t": "eq",
                 "v": "OK",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KO",
+                "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 3,
         "x": 590,
         "y": 280,
         "wires": [
             [
-                "fea20c5a43b6cfb9",
+                "fea20c5a43b6cfb9"
+            ],
+            [
                 "03e2239b0784dbd0"
+            ],
+            [
+                "19b8c290394557cd"
             ]
         ]
+    },
+    {
+        "id": "19b8c290394557cd",
+        "type": "http response",
+        "z": "bafa15919ae21bbb",
+        "name": "ArgumentError",
+        "statusCode": "404",
+        "headers": {},
+        "x": 800,
+        "y": 360,
+        "wires": []
     }
 ]

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node-red"
+    "start:node_red": "node-red -p 2345 ",
+    "start:message": "mosquitto_pub -h 127.0.0.1 -t node_red -m \"Ceci est un message\""
   },
   "keywords": [],
   "author": "",
